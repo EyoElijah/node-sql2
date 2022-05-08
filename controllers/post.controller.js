@@ -5,7 +5,7 @@ const getAllPosts = async (req, res, next) => {
     const [posts, _] = await findAll();
     res.status(200).json({
       count: posts.length,
-      posts,
+      posts: posts,
     });
   } catch (error) {
     console.log(error);
